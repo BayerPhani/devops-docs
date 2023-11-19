@@ -49,7 +49,6 @@ nav:
         - Appendix C: crv_appendix_c.md
         - Appendix D: crv_appendix_d.md
         - Appendix E: crv_appendix_e.md
-   
 extra_css:
   - assets/css/style.css
 extra_javascript:
