@@ -1,10 +1,56 @@
-site_name: Example via GitHub Actions
-theme:
-  name: 'material'
-  palette:
-    primary: grey
+# Project information
+site_name: CRV Documentation
+site_description: CRV Documentation
+site_author: Iraj Mohebalian
+site_url: https://docs.int.bayer.com/crv/
+copyright: Bayer
 
-plugins:
-  - search:
-  - git-revision-date-localized:
-      fallback_to_build_date: true
+# Repository
+repo_name: bayer-int/crv
+repo_url: https://github.com/bayer-int/crv
+edit_uri: edit/master/docs
+
+# Configuration
+theme:
+  name: material
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - extra
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+# Page tree
+nav:
+  - Introduction: index.md
+  - Training Material: trainings.md
+  - Macros:
+    - CRV_CHECK: 
+        - Intro: purpose.md
+        - Requirements: purpose.md
+        - Parameters: crv_chk_parameters.md
+        - Checks and Error handling: crv_chk_error.md
+        - Processing Steps: crv_chk_processing.md
+        - Output Generation: crv_output_generation.md
+        - Status: crv_status.md
+        - Constraints: crv_constraints.md
+        - Publishing: crv_document_finish.md
+        - Appendix A: crv_appendix_a.md
+        - Appendix B: crv_appendix_b.md
+        - Appendix C: crv_appendix_c.md
+        - Appendix D: crv_appendix_d.md
+        - Appendix E: crv_appendix_e.md
+   
+extra_css:
+  - assets/css/style.css
+extra_javascript:
+  - assets/js/mermaid.min.js
